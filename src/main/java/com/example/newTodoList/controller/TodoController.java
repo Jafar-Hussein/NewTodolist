@@ -26,13 +26,13 @@ public class TodoController {
     }
 
     // get all todos
-    @PostMapping("/todos")
+    @GetMapping("/todos")
     public ResponseEntity<?> getTodos() {
         return ResponseEntity.ok(todoService.getAllTodos());
     }
 
     // get a todo by id
-    @PostMapping("/getById/{id}")
+    @GetMapping("/getById/{id}")
     public ResponseEntity<?> getById(@PathVariable String id) {
         return ResponseEntity.ok(todoService.getById(id));
     }
