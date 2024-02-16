@@ -73,20 +73,11 @@ public class TodoService {
 
     // delete a todo
     public void deleteById(String id) {
-        // if the specific task does not exist, return
-        if (todoRepository.findById(id).isEmpty()){
-            return;
-        }
         todoRepository.deleteById(id);
     }
 
     // clear all todos
     public void clearAll() {
-        // if there are no todos, return
-        if (todoRepository.findAll().isEmpty()) {
-            return;
-        }
-        // otherwise, delete all todos
         todoRepository.deleteAll();
     }
 }
