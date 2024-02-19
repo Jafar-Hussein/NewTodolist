@@ -22,7 +22,6 @@ i created a custom buildspec file to define the build process and the commands t
 
 ### Elastic Beanstalk
 - **Function**: Elastic Beanstalk takes the backend code from the codepipeline and deploys it to the cloud.
-- **Scalability and Management**: Elastic Beanstalk automatically manages the infrastructure and can scale resources based on the application load.
 - **Connection to Frontend**: The deployed application on Elastic Beanstalk is connected to the [Frontend](https://github.com/Jafar-Hussein/AwsTodolist_Frontend) side using Fetch, Post, Patch, and Delete requests.
 - Elastic beanstalk is where i am hosting the application, i use the generated url and combine the spring boot endpoints to create a full url that has the crud operations that the frontend can use to interact with the backend.
 
