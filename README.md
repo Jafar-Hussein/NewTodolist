@@ -2,6 +2,7 @@
 
 ## Description
 This is a simple todo list application that uses Crud operations to manage a list of tasks. This backend uses a RESTful API to manage the crud operations to the tasks that are stored in a database.
+It will also use fontend to interact with the backend to perform the crud operations and give the user a better experience instead of using  a browser or java console to interact with the backend.
 
 ## Pipeline process
 This is what i used to in my Project
@@ -47,8 +48,8 @@ http://localhost:5000/todo/add
 so you can use the application via the frontend side instead of a browser.
 
 ## Thougths
-I think this was a learning experience for me, I have never used AWS before and I have never used a pipeline before so this was a great learning experience for me. Also learning to connect aws to the other projects gave me a better understanding of the imortance of the pipeline and how it can be used to deploy applications to the cloud.
-Working hands on with aws has me a deeper knowledge of cloud services and how to deploy applications to the cloud.
+I think this was a learning experience for me, I have never used AWS before and I have never used a pipeline before so this was a great learning experience for me. Also learning to connect aws to the other projects gave me a better understanding of the importance of the pipeline and how it can be used to deploy applications to the cloud.
+Working hands on with aws has given me a deeper knowledge of cloud services and how to deploy applications to the cloud.
 
 ## badges
 ![badmath](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
