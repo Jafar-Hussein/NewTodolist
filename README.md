@@ -35,9 +35,9 @@ This is the pipeline process that i used to deploy the application to the cloud,
 - ***MongoDB***: This is the database that the application uses to store the tasks.
 
 ## installation and usage
-- ***Installation***: This project will be hosted for a short period of time on the Elastic BeansTalk, when the project is live you can access the application via the [Frontend](https://github.com/Jafar-Hussein/AwsTodolist_Frontend) side.
+- ***Installation***: This project will be hosted for a short period of time on the Elastic Beanstalk, when the project is live you can access the application via the [Frontend](https://github.com/Jafar-Hussein/AwsTodolist_Frontend) side.
 Otherwise, you can clone this and the [Frontend](https://github.com/Jafar-Hussein/AwsTodolist_Frontend) side and run the application locally.
-if you are using it locally you will be force to change the url in the javascript files to the localhost url like so:
+if you are using it locally you will be forced to change the url in the javascript files to the localhost url like so:
 ```javascript file
 change from this
 http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/add
