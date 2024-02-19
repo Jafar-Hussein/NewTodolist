@@ -10,7 +10,7 @@ This is a simple todo list application that uses Crud operations to manage a lis
 - **Significance**: GitHub Actions serves as the initial step to verify code quality before it's passed on to AWS services for deployment.
 - note that github actions is not meant to deploy to aws, it is only used to build and test the application before creating a pipline via aws to deploy the application to the cloud.
 ### CodeBuild
-- **Function**: CodeBuild takes the latest push from the GitHub repository and then builds the application according to the specifications defined in the buildspec file built into the codeBuild service. 
+- **Function**: CodeBuild takes the latest push from the GitHub repository and then builds the application according to the specifications defined in the buildspec file built into the codeBuild service. Here is the [BuildSpec](BuildSpec.md) 
 - **Build Specification**: A build specification (buildspec.yml) defines the build process, including commands to install dependencies, build, and test the application.
 - **Compilation and Testing**: CodeBuild compiles the code, runs tests, and generates build artifacts to be used in the next step of the CI/CD process.
 
