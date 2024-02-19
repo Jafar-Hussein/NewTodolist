@@ -4,26 +4,29 @@
 This is a simple todo list application that uses Crud operations to manage a list of tasks. This backend uses a RESTful API to manage the crud operations to the tasks that are stored in a database.
 
 ## Pipeline process
+This is what i used to in my Project
 ### GitHub Actions
 - **Function**: GitHub Actions is used to build and test the application to ensure it's ready for deployment.
 - **Workflow**: When a new push is made to the main branch in the GitHub repository, a GitHub Actions workflow is triggered to build and run tests on the application.
-- **Significance**: GitHub Actions serves as the initial step to verify code quality before it's passed on to AWS services for deployment.
 - note that github actions is not meant to deploy to aws, it is only used to build and test the application before creating a pipline via aws to deploy the application to the cloud.
+I used this so that i can indetify any errors in the code before deploying it to the cloud.
 ### CodeBuild
-- **Function**: CodeBuild takes the latest push from the GitHub repository and then builds the application according to the specifications defined in the buildspec file built into the codeBuild service. Here is the [BuildSpec](BuildSpec.md) 
-- **Build Specification**: A build specification (buildspec.yml) defines the build process, including commands to install dependencies, build, and test the application.
-- **Compilation and Testing**: CodeBuild compiles the code, runs tests, and generates build artifacts to be used in the next step of the CI/CD process.
+- **Function**: CodeBuild takes the latest push from the GitHub repository and then builds the application according to the specifications defined in the buildspec file built into the codeBuild service. Here is the [BuildSpec](BuildSpec.md)
+- like the description above, i used codebuild to litsen to pushes to the main branch and then build the application and run tests on it to ensure that it is ready to be sent to codepipeline for deployment.
+i created a custom buildspec file to define the build process and the commands that codebuild should run to build the application.
 
 ### CodePipeline
 - **Function**: CodePipeline takes the built artifacts from CodeBuild and orchestrates the deployment process.
 - **Pipeline Stages**: Configure different stages in the pipeline for building, testing, approval, and deploying the application.
-- **Integrations**: CodePipeline can integrate with other AWS services and external tools to automate the entire CI/CD process.
+- I created the codepipeline to listen to the codebuild service so that it can take the built artifacts and deploy them to the cloud. this is the final step in the pipeline process and it is the step that deploys the application to Elastic Beanstalk.
 
 ### Elastic Beanstalk
 - **Function**: Elastic Beanstalk takes the backend code from the codepipeline and deploys it to the cloud.
 - **Scalability and Management**: Elastic Beanstalk automatically manages the infrastructure and can scale resources based on the application load.
 - **Connection to Frontend**: The deployed application on Elastic Beanstalk is connected to the [Frontend](https://github.com/Jafar-Hussein/AwsTodolist_Frontend) side using Fetch, Post, Patch, and Delete requests.
+- Elastic beanstalk is where i am hosting the application, i use the generated url and combine the spring boot endpoints to create a full url that has the crud operations that the frontend can use to interact with the backend.
 
+This is the pipeline process that i used to deploy the application to the cloud, i used github actions to build and test the application, then i used codebuild to build the application and run tests on it, then i used codepipeline to deploy the application to the cloud using elastic beanstalk.
 ## Technologies
 - ***Java jdk 17***: This is the language that the application is written in.
 - ***Spring Boot***: This is the framework that the application is built on.
