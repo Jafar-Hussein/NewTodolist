@@ -27,6 +27,17 @@ i created a custom buildspec file to define the build process and the commands t
 - Elastic beanstalk is where i am hosting the application, i use the generated url and combine the spring boot endpoints to create a full url that has the crud operations that the frontend can use to interact with the backend.
 
 This is the pipeline process that i used to deploy the application to the cloud, i used github actions to build and test the application and identify errors in the code, then i used codebuild to pull the latest push to the main branch and build the application and run tests on it, then i used codepipeline to listen to the codebuild and deploy the application to the cloud using elastic beanstalk where it is going to be hosted on.
+
+## Functionality
+### Crud Functionality
+This application Uses the crud operations to manage and add tasks to the database. The user can perform the following operations:
+- ***Add a task***: The user can add a task to the database.
+- ***Delete a task***: The user can delete a task from the database.
+- ***Clear all tasks***: The user can delete all the tasks from the database.
+- ***Update a task***: The user can update a task from the database.
+- ***Get all tasks***: The user can get all the tasks from the database.
+- ***Get a task by id***: The user can get a specific task from the database by using the id of the task.
+
 ## Technologies
 - ***Java jdk 17***: This is the language that the application is written in.
 - ***Spring Boot***: This is the framework that the application is built on.
