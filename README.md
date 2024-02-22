@@ -30,13 +30,20 @@ This is the pipeline process that i used to deploy the application to the cloud,
 
 ## Functionality
 ### Crud Functionality
+The project uses this url to connect with elastic beanstalk http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/.
 This application Uses the crud operations to manage and add tasks to the database. The user can perform the following operations:
 - ***Add a task***: The user can add a task to the database.
+- Url: http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/add
 - ***Delete a task***: The user can delete a task from the database.
+- http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/delete/{id}
 - ***Clear all tasks***: The user can delete all the tasks from the database.
+- Url: http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/clearAll
 - ***Update a task***: The user can update a task from the database.
+- Url: http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/update/{id}
 - ***Get all tasks***: The user can get all the tasks from the database.
+- http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/todos
 - ***Get a task by id***: The user can get a specific task from the database by using the id of the task.
+- Url: http://molndaltodolist-env.eba-ej3fe9gt.eu-north-1.elasticbeanstalk.com/todo/getById/{id}
 
 ## Technologies
 - ***Java jdk 17***: This is the language that the application is written in.
